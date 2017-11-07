@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 14:00:29 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 15:09:58 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/07 15:56:46 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	long			i;
+	unsigned long	i;
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 
