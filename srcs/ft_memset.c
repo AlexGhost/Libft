@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 10:57:04 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 11:34:01 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/07 12:17:55 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int				i;
+	unsigned long	i;
 	unsigned char	*ptr;
 
 	i = 0;

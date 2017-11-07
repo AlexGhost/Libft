@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 12:15:14 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/06 18:43:23 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/07 12:14:58 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-int		ft_strlen(char *str);
-char	*ft_strdup(char *src);
+char	*ft_strdup(char *src)
+{
+	char	*newptr;
+	int		i;
+	int		taille;
+
+	i = 0;
+	taille = 0;
+	while (src[taille] != '\0')
+	{
+		taille += 1;
+	}
+	newptr = (char*)malloc(sizeof(*newptr) * taille + 1);
+	while (src[i] != '\0')
+	{
+		newptr[i] = src[i];
+		i += 1;
+	}
+	newptr[i] = '\0';
+	free(newptr);
+	return (newptr);
+}
