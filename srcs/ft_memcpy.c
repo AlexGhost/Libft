@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/06 18:43:23 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 15:01:11 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/07 14:00:29 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/07 15:04:02 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
-char	*ft_strdup(char *src)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*newptr;
-	int		i;
-	int		taille;
+	long	i;
+	char	*pdst;
+	char	*psrc;
 
 	i = 0;
-	taille = 0;
-	while (src[taille] != '\0')
+	pdst = (char*)dst;
+	psrc = (char*)src;
+	while (i < n)
 	{
-		taille += 1;
+		pdst[i] = psrc[i];
+		i++;
 	}
-	newptr = (char*)malloc(sizeof(*newptr) * taille + 1);
-	while (src[i] != '\0')
-	{
-		newptr[i] = src[i];
-		i += 1;
-	}
-	newptr[i] = '\0';
-	return (newptr);
+	return (dst);
 }
