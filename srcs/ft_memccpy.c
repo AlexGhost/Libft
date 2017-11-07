@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 14:00:29 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 15:09:58 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/07 15:07:44 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/07 15:29:37 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	long			i;
 	unsigned char	*pdst;
@@ -23,8 +23,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	psrc = (unsigned char*)src;
 	while (i < n)
 	{
+		if (psrc[i] == c)
+		{
+			return (psrc + (i + 1));
+		}
 		pdst[i] = psrc[i];
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }
