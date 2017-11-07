@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 17:59:20 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/07 18:29:41 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,10 @@ int		ft_isprint(int c);
 int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+char	*ft_strstr(char *str, char *to_find);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
+char	*ft_strcat(char *dest, char *src);
+char	*ft_strncat(char *dest, char *src, int nb);
