@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 16:50:50 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/07 16:10:46 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/07 16:51:24 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
-int		ft_strlen(char *str);
-char	*ft_strdup(char *src);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned long	i;
+	unsigned char	*ptr;
+
+	i = 0;
+	ptr = (unsigned char*)s;
+	while (i < n)
+	{
+		if (ptr[i] == c)
+			return (ptr + i);
+		i++;
+	}
+	return (NULL);
+}
