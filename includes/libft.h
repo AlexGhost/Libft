@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 19:10:35 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/07 19:19:08 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strncat(char *dest, char *src, int nb);
+char	*ft_strchr(const char *s, int c);
