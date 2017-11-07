@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 17:41:40 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/07 17:45:58 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,4 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(char *str);
 int		ft_isalpha(int c);
+int		ft_isdigit(int c);
