@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 19:44:45 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/08 11:51:11 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,5 @@ char	*ft_strncat(char *dest, char *src, int nb);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
