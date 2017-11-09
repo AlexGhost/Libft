@@ -6,11 +6,14 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/09 12:54:38 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:13:29 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -64,3 +67,5 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+
+#endif
