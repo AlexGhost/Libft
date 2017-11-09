@@ -6,14 +6,14 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:54:53 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/09 13:38:09 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:16:45 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 
-void	fillstr(int neg, long size, int n, char *str)
+static void		fillstr(int neg, long size, int n, char *str)
 {
 	int i;
 
@@ -32,7 +32,7 @@ void	fillstr(int neg, long size, int n, char *str)
 	}
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	int		length;

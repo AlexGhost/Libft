@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:21:21 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/09 16:09:18 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:18:45 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include "../includes/libft.h"
 
-int		countwords(char const *s, char c)
+static int	countwords(char const *s, char c)
 {
 	int t;
 	int i;
@@ -43,14 +43,14 @@ int		countwords(char const *s, char c)
 	return (t);
 }
 
-int		charequ(char t, char c)
+static int	charequ(char t, char c)
 {
 	if (c == t)
 		return (1);
 	return (0);
 }
 
-void	ft_stock_char(char const *str, char **res, char c)
+static void	ft_stock_char(char const *str, char **res, char c)
 {
 	int i[2];
 	int z;
@@ -79,7 +79,7 @@ void	ft_stock_char(char const *str, char **res, char c)
 		res[z][i[1]] = '\0';
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		words;
