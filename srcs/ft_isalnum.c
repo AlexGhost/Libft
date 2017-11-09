@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:48:02 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 17:50:13 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:45:46 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@ int		ft_isalnum(int c)
 	if (c >= '0' && c <= '9')
 		return (1);
 	else if (c >= 'A' && c <= 'Z')
-		return (2);
+		return (1);
 	else if (c >= 'a' && c <= 'z')
-		return (3);
+		return (1);
 	return (0);
 }

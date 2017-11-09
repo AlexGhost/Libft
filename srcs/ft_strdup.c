@@ -6,11 +6,12 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:43:23 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 15:01:11 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:29:20 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
 
 char	*ft_strdup(char *src)
 {
@@ -25,6 +26,8 @@ char	*ft_strdup(char *src)
 		taille += 1;
 	}
 	newptr = (char*)malloc(sizeof(*newptr) * taille + 1);
+	if (!newptr)
+		return (NULL);
 	while (src[i] != '\0')
 	{
 		newptr[i] = src[i];

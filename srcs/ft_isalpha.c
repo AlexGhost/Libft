@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:35:31 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 17:41:33 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:45:12 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@ int		ft_isalpha(int c)
 	if (c >= 'A' && c <= 'Z')
 		return (1);
 	else if (c >= 'a' && c <= 'z')
-		return (2);
-	return (0);
+		return (1);
+	else
+		return (0);
 }
