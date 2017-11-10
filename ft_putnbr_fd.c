@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 11:43:40 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 14:43:06 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/09 11:45:56 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/10 20:10:05 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int i;
+	long taille;
+	long nb;
 
-	if (s)
+	taille = 1;
+	nb = n;
+	if (nb < 0)
 	{
-		i = 0;
-		while (s[i])
-		{
-			ft_putchar_fd(s[i], fd);
-			i++;
-		}
+		ft_putchar_fd('-', fd);
+		nb = -nb;
 	}
+	while (taille <= nb)
+	{
+		taille = taille * 10;
+	}
+	taille = taille / 10;
+	while (taille > 1)
+	{
+		ft_putchar_fd((nb / taille) + '0', fd);
+		nb = nb % taille;
+		taille = taille / 10;
+	}
+	ft_putchar_fd((nb % 10) + '0', fd);
 }
