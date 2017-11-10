@@ -6,37 +6,47 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:34:42 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/08 19:01:35 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 16:33:39 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static void		ft_trim(char const *s, char *str, int i, int k)
 {
-	char	*str;
-	int		i;
-	int		j;
+	int j;
+	int go;
 
-	i = 0;
-	while (s[i])
-		i++;
-	str = malloc(sizeof(char) * i);
-	if (!str)
-		return (NULL);
-	i = 0;
 	j = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	while (s[i])
+	go = 1;
+	while (s[i] && go)
 	{
 		str[j] = s[i];
 		i++;
 		j++;
+		k = i;
+		while (s[k] == ' ' || s[k] == '\n' || s[k] == '\t')
+		{
+			k++;
+			if (s[k] == '\0')
+				go = 0;
+		}
 	}
-	j--;
-	while (str[j] == ' ' || str[j] == '\n' || str[j] == '\t')
-		str[j--] = '\0';
+	str[j] = '\0';
+}
+
+char			*ft_strtrim(char const *s)
+{
+	char	*str;
+	int		i;
+	int		k;
+
+	if (!(str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s + 1)))))
+		return (NULL);
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i++;
+	k = i;
+	ft_trim(s, str, i, k);
 	return (str);
 }
