@@ -6,9 +6,11 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/02 16:25:29 by acourtin          #+#    #+#             */
-/*   Updated: 2017/09/04 22:29:14 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:58:14 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -36,5 +38,5 @@ char	*ft_strstr(char *str, char *to_find)
 		j = 0;
 		i += 1;
 	}
-	return (0);
+	return (NULL);
 }

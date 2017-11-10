@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 19:14:03 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/09 17:50:37 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:26:17 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return (ptr + i);
 		i++;
 	}
+	if (c == '\0')
+		return (ptr + i);
 	return (NULL);
 }

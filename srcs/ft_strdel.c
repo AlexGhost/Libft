@@ -6,15 +6,17 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:51:14 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/08 13:51:41 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 13:59:24 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {
-	free(as);
-	as = NULL;
+	if (as)
+	{
+		*as = NULL;
+		free(*as);
+	}
 }

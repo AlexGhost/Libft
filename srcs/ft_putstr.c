@@ -6,20 +6,23 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:08:38 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/08 19:10:03 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 14:41:27 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {
 	int i;
 
-	i = 0;
-	while (s[i])
+	if (s)
 	{
-		ft_putchar(s[i]);
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 	}
 }

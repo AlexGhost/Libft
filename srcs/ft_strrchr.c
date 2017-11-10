@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 19:21:12 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 19:22:31 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:28:19 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strrchr(const char *s, int c)
 	while (ptr[i] != '\0')
 		i++;
 	i--;
+	if (c == '\0')
+		return (ptr + i + 1);
 	while (i > 0)
 	{
 		if (ptr[i] == c)

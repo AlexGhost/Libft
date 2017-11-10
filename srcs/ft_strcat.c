@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/03 15:13:21 by acourtin          #+#    #+#             */
-/*   Updated: 2017/09/04 14:38:29 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:06:45 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,11 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		taille += 1;
 	}
-	if (taille > 0)
+	while (src[i] != '\0')
 	{
-		while (src[i] != '\0')
-		{
-			dest[taille] = src[i];
-			taille += 1;
-			i += 1;
-		}
-		dest[taille] = '\0';
+		dest[taille + i] = src[i];
+		i += 1;
 	}
+	dest[taille + i] = '\0';
 	return (dest);
 }

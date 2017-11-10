@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:46:26 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 19:10:39 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 11:58:38 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 	j = 0;
 	while (str[i] != '\0' && i < len)
 	{
-		while (to_find[j] == str[i + j])
+		while (to_find[j] == str[i + j] && (i + j) < len)
 		{
 			if (j == taille - 1)
 				return (str + i);
@@ -38,5 +38,5 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 		j = 0;
 		i += 1;
 	}
-	return (0);
+	return (NULL);
 }
