@@ -6,13 +6,11 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:21:21 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/09 17:18:45 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:11:53 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 static int	countwords(char const *s, char c)
 {

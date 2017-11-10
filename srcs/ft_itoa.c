@@ -6,12 +6,11 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:54:53 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/09 17:16:45 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 19:00:44 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static void		fillstr(int neg, long size, int n, char *str)
 {
@@ -30,6 +29,17 @@ static void		fillstr(int neg, long size, int n, char *str)
 		n %= size;
 		size /= 10;
 	}
+	str[i] = '\0';
+}
+
+void			calculsize(long *size, int *length, int n)
+{
+	while (*size < n)
+	{
+		*size *= 10;
+		*length += 1;
+	}
+	*size /= 10;
 }
 
 char			*ft_itoa(int n)
@@ -39,6 +49,8 @@ char			*ft_itoa(int n)
 	long	size;
 	int		neg;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	length = 1;
 	size = 1;
 	neg = 1;
@@ -48,14 +60,10 @@ char			*ft_itoa(int n)
 		neg = -1;
 		length++;
 	}
-	while (size < n)
-	{
-		size *= 10;
-		length++;
-	}
-	size /= 10;
-	str = malloc(sizeof(char) * length);
-	if (!str)
+	calculsize(&size, &length, n);
+	if (n == 0)
+		size = 1;
+	if (!(str = malloc(sizeof(char) * (length + 1))))
 		return (NULL);
 	fillstr(neg, size, n, str);
 	return (str);

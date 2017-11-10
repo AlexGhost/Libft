@@ -6,11 +6,11 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:46:26 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 11:58:38 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:03:42 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(char *str, char *to_find, size_t len)
 {
