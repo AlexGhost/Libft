@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 15:07:44 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 18:03:53 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/11 17:02:59 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/11 19:01:29 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	unsigned long	i;
-	unsigned char	*pdst;
-	unsigned char	*psrc;
+	t_list		*newlist;
+	t_list		*curlist;
 
-	i = 0;
-	pdst = (unsigned char*)dst;
-	psrc = (unsigned char*)src;
-	while (i < n)
+	newlist = (t_list*)malloc(sizeof(t_list));
+	if (!newlist)
+		return (NULL);
+	curlist = lst;
+	while (curlist->next != NULL)
 	{
-		pdst[i] = psrc[i];
-		if (psrc[i] == (unsigned char)c)
-		{
-			return (dst + (i + 1));
-		}
-		i++;
+		ft_lsttail(&newlist, ft_lstnew(f(curlist)->content, f(curlist)->content_size));
+		curlist = curlist->next;
 	}
-	return (NULL);
+	ft_lsttail(&newlist, ft_lstnew(f(curlist)->content, f(curlist)->content_size));
+	return (newlist);
 }

@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lsttail.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 15:07:44 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 18:03:53 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/11 18:36:34 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/11 18:42:58 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void			ft_lsttail(t_list **alst, t_list *new)
 {
-	unsigned long	i;
-	unsigned char	*pdst;
-	unsigned char	*psrc;
+	t_list		*curlist;
 
-	i = 0;
-	pdst = (unsigned char*)dst;
-	psrc = (unsigned char*)src;
-	while (i < n)
+	curlist = *alst;
+	while (curlist->next != NULL)
 	{
-		pdst[i] = psrc[i];
-		if (psrc[i] == (unsigned char)c)
-		{
-			return (dst + (i + 1));
-		}
-		i++;
+		curlist = curlist->next;
 	}
-	return (NULL);
+	curlist->next = new;
 }
