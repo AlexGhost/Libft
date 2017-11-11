@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:34:42 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 18:11:26 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/11 22:11:08 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char			*ft_strtrim(char const *s)
 	int		i;
 	int		k;
 
+	if (!s)
+		return (NULL);
 	if (!(str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s + 1)))))
 		return (NULL);
 	i = 0;

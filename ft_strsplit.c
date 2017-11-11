@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:21:21 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 12:36:33 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/11 22:13:03 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		words;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	words = countwords(s, c);
 	tab = malloc(sizeof(char*) * (words + 30));
@@ -97,9 +99,7 @@ char		**ft_strsplit(char const *s, char c)
 	}
 	i = 0;
 	while (i < words)
-	{
 		i++;
-	}
 	tab[i] = 0;
 	ft_stock_char(s, tab, c);
 	return (tab);

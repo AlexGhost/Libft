@@ -6,11 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 16:35:14 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/07 12:11:41 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/11 21:29:34 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+size_t		ft_strlen(char *str)
 {
 	int i;
 

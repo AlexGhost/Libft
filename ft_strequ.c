@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:03:35 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/08 15:37:26 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/11 22:07:25 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@ int		ft_strequ(char const *s1, char const *s2)
 	int taille1;
 	int taille2;
 
-	i = 0;
-	taille1 = 0;
-	taille2 = 0;
-	while (s1[taille1])
-		taille1++;
-	while (s2[taille2])
-		taille2++;
-	if (taille1 != taille2)
-		return (0);
-	while (s1[i] && s2[i])
+	if (s1 && s2)
 	{
-		if (s1[i] != s2[i])
+		i = 0;
+		taille1 = 0;
+		taille2 = 0;
+		while (s1[taille1])
+			taille1++;
+		while (s2[taille2])
+			taille2++;
+		if (taille1 != taille2)
 			return (0);
-		i++;
+		while (s1[i] && s2[i])
+		{
+			if (s1[i] != s2[i])
+				return (0);
+			i++;
+		}
 	}
 	return (1);
 }
