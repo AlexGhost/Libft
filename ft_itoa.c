@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:54:53 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 19:00:44 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/11 13:01:19 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void		fillstr(int neg, long size, int n, char *str)
 	{
 		str[i] = (n / size) + '0';
 		i++;
-		n %= size;
+		n = n % size;
 		size /= 10;
 	}
 	str[i] = '\0';
@@ -34,7 +34,7 @@ static void		fillstr(int neg, long size, int n, char *str)
 
 void			calculsize(long *size, int *length, int n)
 {
-	while (*size < n)
+	while (*size <= n)
 	{
 		*size *= 10;
 		*length += 1;

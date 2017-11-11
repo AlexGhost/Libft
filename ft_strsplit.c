@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:21:21 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 18:11:53 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/11 12:36:33 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ char		**ft_strsplit(char const *s, char c)
 	i = 0;
 	while (i < words)
 	{
-		tab[i] = ft_strdup("ay lmao\0");
 		i++;
 	}
 	tab[i] = 0;
