@@ -6,7 +6,7 @@
 #    By: acourtin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 10:27:54 by acourtin          #+#    #+#              #
-#    Updated: 2017/11/12 15:00:13 by acourtin         ###   ########.fr        #
+#    Updated: 2017/11/12 20:57:44 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SRC.C 		= 	ft_atoi.c \
 				ft_isdigit.c \
 				ft_isprint.c \
 				ft_isspace.c \
+				ft_islower.c \
+				ft_isupper.c \
 				ft_itoa.c \
 				ft_memalloc.c \
 				ft_memccpy.c \
@@ -74,20 +76,24 @@ SRC.C 		= 	ft_atoi.c \
 				ft_lstadd.c \
 				ft_lsttail.c \
 				ft_lstiter.c \
-				ft_lstmap.c
+				ft_lstmap.c \
+				ft_lstsize.c
 
 SRC.O 		= 	$(SRC.C:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC.O)
+$(NAME): clear $(SRC.O)
 	@ar rc $(NAME) $(SRC.O)
 	@ranlib $(NAME)
 	@echo "\033[33m--- $(NAME) cree ---\033[0m"
 
+clear:
+	@clear
+
 %.o: %.c
 	@$(CC) $(CCFLAGS) -o $@ -c $<
-	@echo "Compilation de $<\033[0m"
+	@echo "\033[36mCompilation de \033[0m$<\033[0m"
 
 clean:
 	@rm -rf $(SRC.O)

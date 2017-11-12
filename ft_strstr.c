@@ -6,33 +6,33 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/02 16:25:29 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 18:08:39 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:16:24 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int j;
 	int taille;
 
 	taille = 0;
-	while (to_find[taille] != '\0')
+	while (needle[taille] != '\0')
 	{
 		taille += 1;
 	}
 	if (taille == 0)
-		return (str);
+		return ((char*)haystack);
 	i = 0;
 	j = 0;
-	while (str[i] != '\0')
+	while (haystack[i] != '\0')
 	{
-		while (to_find[j] == str[i + j])
+		while (needle[j] == haystack[i + j])
 		{
 			if (j == taille - 1)
-				return (str + i);
+				return ((char*)haystack + i);
 			j += 1;
 		}
 		j = 0;

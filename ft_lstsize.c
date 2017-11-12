@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/06 18:43:23 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 20:17:42 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/12 20:55:58 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/12 20:56:50 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int		ft_lstsize(t_list *lst)
 {
-	char	*newptr;
-	int		i;
-	int		taille;
+	int		count;
+	t_list	*curlist;
 
-	i = 0;
-	taille = 0;
-	while (src[taille] != '\0')
+	count = 0;
+	curlist = lst;
+	if (curlist == 0)
+		return (0);
+	while (curlist->next != 0)
 	{
-		taille += 1;
+		curlist = curlist->next;
+		count += 1;
 	}
-	newptr = (char*)malloc(sizeof(*newptr) * taille + 1);
-	if (!newptr)
-		return (NULL);
-	while (src[i] != '\0')
-	{
-		newptr[i] = src[i];
-		i += 1;
-	}
-	newptr[i] = '\0';
-	return (newptr);
+	count += 1;
+	return (count);
 }
