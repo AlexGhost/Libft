@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 20:57:20 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/12 21:11:33 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,8 @@ void				ft_lsttail(t_list **alst, t_list *new_elem);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_lstsize(t_list *lst);
+t_list				*ft_lstat(t_list *lst, unsigned int nbr);
+void				ft_lstrev(t_list **lst);
+t_list				*ft_lstlast(t_list *lst);
 
 #endif

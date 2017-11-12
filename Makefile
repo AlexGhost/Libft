@@ -6,7 +6,7 @@
 #    By: acourtin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 10:27:54 by acourtin          #+#    #+#              #
-#    Updated: 2017/11/12 20:57:44 by acourtin         ###   ########.fr        #
+#    Updated: 2017/11/12 21:10:49 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,10 @@ SRC.C 		= 	ft_atoi.c \
 				ft_lsttail.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
-				ft_lstsize.c
+				ft_lstsize.c \
+				ft_lstat.c \
+				ft_lstrev.c \
+				ft_lstlast.c
 
 SRC.O 		= 	$(SRC.C:.c=.o)
 
