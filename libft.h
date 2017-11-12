@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 21:29:51 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/12 13:10:01 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isprint(int c);
 int					ft_isascii(int c);
+int					ft_isspace(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_strcpy(char *dest, char *src);

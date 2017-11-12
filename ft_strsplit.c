@@ -6,13 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:21:21 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 22:13:03 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/12 13:05:44 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	countwords(char const *s, char c)
+static int	ft_countwords(char const *s, char c)
 {
 	int t;
 	int i;
@@ -41,40 +41,32 @@ static int	countwords(char const *s, char c)
 	return (t);
 }
 
-static int	charequ(char t, char c)
-{
-	if (c == t)
-		return (1);
-	return (0);
-}
-
 static void	ft_stock_char(char const *str, char **res, char c)
 {
-	int i[2];
+	int i;
+	int j;
 	int z;
 
-	i[0] = 0;
-	i[1] = 0;
+	i = 0;
+	j = 0;
 	z = 0;
-	while (str[i[0]])
+	while (str[i])
 	{
-		if (charequ(str[i[0]], c) && !i[1])
-			i[1] += 0;
-		else if (charequ(str[i[0]], c))
+		if (str[i] == c && j)
 		{
-			res[z][i[1]] = '\0';
-			i[1] = 0;
+			res[z][j] = '\0';
+			j = 0;
 			z += 1;
 		}
-		else
+		else if (str[i] != c || j)
 		{
-			res[z][i[1]] = str[i[0]];
-			i[1] += 1;
+			res[z][j] = str[i];
+			j += 1;
 		}
-		i[0] += 1;
+		i += 1;
 	}
-	if (i[1] != 0)
-		res[z][i[1]] = '\0';
+	if (j != 0)
+		res[z][j] = '\0';
 }
 
 char		**ft_strsplit(char const *s, char c)
@@ -86,7 +78,7 @@ char		**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	i = 0;
-	words = countwords(s, c);
+	words = ft_countwords(s, c);
 	tab = malloc(sizeof(char*) * (words + 30));
 	if (!tab)
 		return (NULL);

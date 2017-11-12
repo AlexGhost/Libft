@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lsttail.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 18:36:34 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 12:42:11 by acourtin         ###   ########.fr       */
+/*   Created: 2017/11/12 13:07:59 by acourtin          #+#    #+#             */
+/*   Updated: 2017/11/12 13:09:50 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-**		Ajoute l'element new_elem a la fin de la liste alst.
-*/
-
-#include "libft.h"
-
-void			ft_lsttail(t_list **alst, t_list *new_elem)
+int			ft_isspace(int c)
 {
-	t_list		*curlist;
-
-	curlist = *alst;
-	while (curlist->next != NULL)
-	{
-		curlist = curlist->next;
-	}
-	curlist->next = new_elem;
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+			|| c == ' ')
+		return (1);
+	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:54:53 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 21:00:13 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/12 13:03:53 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		fillstr(int neg, long size, int n, char *str)
+static void		ft_fillstr(int neg, long size, int n, char *str)
 {
 	int i;
 
@@ -32,7 +32,7 @@ static void		fillstr(int neg, long size, int n, char *str)
 	str[i] = '\0';
 }
 
-static void		calculsize(long *size, int *length, int n)
+static void		ft_calculsize(long *size, int *length, int n)
 {
 	while (*size <= n)
 	{
@@ -60,11 +60,11 @@ char			*ft_itoa(int n)
 		neg = -1;
 		length++;
 	}
-	calculsize(&size, &length, n);
+	ft_calculsize(&size, &length, n);
 	if (n == 0)
 		size = 1;
 	if (!(str = malloc(sizeof(char) * (length + 1))))
 		return (NULL);
-	fillstr(neg, size, n, str);
+	ft_fillstr(neg, size, n, str);
 	return (str);
 }
