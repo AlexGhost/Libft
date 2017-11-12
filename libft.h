@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 21:11:33 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/12 21:27:23 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int					ft_isupper(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_strcpy(char *dest, const char *src);
-char				*ft_strncpy(char *dest, const char *src, unsigned int n);
+char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack, const char *needle,
 		size_t len);
