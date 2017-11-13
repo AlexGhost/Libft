@@ -6,11 +6,11 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:03:35 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 22:07:25 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:58:03 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *s2)
+int		ft_strequ(const char *s1, const char *s2)
 {
 	int i;
 	int taille1;

@@ -6,13 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:34:42 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 17:38:16 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:59:56 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_trim(char const *s, char *str, int i, int k)
+static void		ft_trim(const char *s, char *str, int i, int k)
 {
 	int j;
 	int go;
@@ -35,7 +35,7 @@ static void		ft_trim(char const *s, char *str, int i, int k)
 	str[j] = '\0';
 }
 
-char			*ft_strtrim(char const *s)
+char			*ft_strtrim(const char *s)
 {
 	char	*str;
 	int		i;

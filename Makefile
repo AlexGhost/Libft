@@ -6,7 +6,7 @@
 #    By: acourtin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 10:27:54 by acourtin          #+#    #+#              #
-#    Updated: 2017/11/12 21:10:49 by acourtin         ###   ########.fr        #
+#    Updated: 2017/11/13 14:28:37 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,14 +89,16 @@ all: $(NAME)
 $(NAME): clear $(SRC.O)
 	@ar rc $(NAME) $(SRC.O)
 	@ranlib $(NAME)
-	@echo "\033[33m--- $(NAME) cree ---\033[0m"
+	@echo "\033[33m/------------------------------------\ \\033[0m"
+	@echo "\033[33m|----------- $(NAME) cree -----------| \\033[0m"
+	@echo "\033[33m\------------------------------------/ \\033[0m"
 
 clear:
 	@clear
 
 %.o: %.c
 	@$(CC) $(CCFLAGS) -o $@ -c $<
-	@echo "\033[36mCompilation de \033[0m$<\033[0m"
+	@echo "\033[36mCompilation de \033[0m$<\033[0m \t[]"
 
 clean:
 	@rm -rf $(SRC.O)

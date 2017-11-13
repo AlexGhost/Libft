@@ -6,13 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 14:07:30 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 20:54:52 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/13 15:03:12 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_lstnew(void const *content, size_t content_size)
+t_list			*ft_lstnew(const void *content, size_t content_size)
 {
 	t_list		*list;
 

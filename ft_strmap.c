@@ -6,13 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 14:40:22 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 22:05:26 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:57:08 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(const char *s, char (*f)(char))
 {
 	int		taille;
 	int		i;

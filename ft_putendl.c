@@ -6,13 +6,13 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:11:47 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 14:40:55 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/13 15:01:57 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s)
+void	ft_putendl(const char *s)
 {
 	int i;
 

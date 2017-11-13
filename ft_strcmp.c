@@ -6,11 +6,11 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/02 19:39:26 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 12:26:05 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:55:38 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char const *s1, char const *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	int i;
 
