@@ -6,7 +6,7 @@
 #    By: acourtin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 10:27:54 by acourtin          #+#    #+#              #
-#    Updated: 2017/11/13 14:28:37 by acourtin         ###   ########.fr        #
+#    Updated: 2017/11/13 16:40:25 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,14 +98,14 @@ clear:
 
 %.o: %.c
 	@$(CC) $(CCFLAGS) -o $@ -c $<
-	@echo "\033[36mCompilation de \033[0m$<\033[0m \t[]"
+	@echo "\033[36m - Compilation de \033[0m$<\033[0m"
 
 clean:
 	@rm -rf $(SRC.O)
-	@echo "\033[31mrm -rf objs\033[0m"
+	@echo "\033[31mSuppression - objs\033[0m"
 
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "\033[31mrm -rf $(NAME)\033[0m"
+	@echo "\033[31mSuppression - $(NAME)\033[0m"
 
 re: fclean $(NAME)
