@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:55:58 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 20:56:50 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:02:47 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_lstsize(t_list *lst)
 
 	count = 0;
 	curlist = lst;
-	if (curlist == 0)
+	if (curlist == NULL)
 		return (0);
 	while (curlist->next != 0)
 	{
