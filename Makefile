@@ -6,7 +6,7 @@
 #    By: acourtin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 10:27:54 by acourtin          #+#    #+#              #
-#    Updated: 2017/11/14 14:43:09 by acourtin         ###   ########.fr        #
+#    Updated: 2017/11/14 14:57:30 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,8 +101,14 @@ clean:
 	@rm -rf $(SRC.O)
 	@echo "\033[31mSuppression - objs\033[0m"
 
+reclean:
+	@rm -rf $(SRC.O)
+	@echo "\033[31mSuppression - objs\033[0m"
+
 fclean: clean
 	@rm -rf $(NAME)
 	@echo "\033[31mSuppression - $(NAME)\033[0m"
 
 re: fclean $(NAME)
+
+rec: fclean $(NAME) reclean
