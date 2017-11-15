@@ -6,7 +6,7 @@
 #    By: acourtin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 10:27:54 by acourtin          #+#    #+#              #
-#    Updated: 2017/11/14 14:57:30 by acourtin         ###   ########.fr        #
+#    Updated: 2017/11/15 17:17:41 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,15 +93,11 @@ $(NAME): $(SRC.O)
 	@echo "\033[33m|----------- $(NAME) cree -----------| \\033[0m"
 	@echo "\033[33m\------------------------------------/ \\033[0m"
 
-%.o: ./srcs/%.c
+%.o: %.c
 	@$(CC) $(CCFLAGS) -o $@ -c $< -Iincludes
 	@echo "\033[36m - Compilation de \033[0m$<\033[0m"
 
 clean:
-	@rm -rf $(SRC.O)
-	@echo "\033[31mSuppression - objs\033[0m"
-
-reclean:
 	@rm -rf $(SRC.O)
 	@echo "\033[31mSuppression - objs\033[0m"
 
@@ -110,5 +106,3 @@ fclean: clean
 	@echo "\033[31mSuppression - $(NAME)\033[0m"
 
 re: fclean $(NAME)
-
-rec: fclean $(NAME) reclean
