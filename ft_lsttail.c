@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 18:36:34 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/14 15:00:07 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:37:19 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ void			ft_lsttail(t_list **alst, t_list *new_elem)
 {
 	t_list		*curlist;
 
-	if (!*alst)
-		*alst = new_elem;
 	curlist = *alst;
-	while (curlist->next != NULL)
+	if (curlist)
 	{
-		curlist = curlist->next;
+		while (curlist->next)
+			curlist = curlist->next;
+		curlist->next = new_elem;
 	}
-	curlist->next = new_elem;
+	else
+		*alst = new_elem;
 }

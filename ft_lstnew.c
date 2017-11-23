@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 14:07:30 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/13 15:03:12 by acourtin         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:58:39 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_list			*ft_lstnew(const void *content, size_t content_size)
 	if (!list)
 		return (NULL);
 	list->content = ft_memalloc(content_size);
+	if (!list->content)
+		return (NULL);
 	if (!content)
 	{
 		list->content = NULL;
