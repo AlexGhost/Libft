@@ -26,7 +26,8 @@ SRC.C = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
 		ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstdel.c \
 		ft_lstdelone.c ft_lstadd.c ft_lsttail.c ft_lstiter.c ft_lstmap.c \
-		ft_lstsize.c ft_lstat.c ft_lstrev.c ft_lstlast.c ft_strnjoin.c
+		ft_lstsize.c ft_lstat.c ft_lstrev.c ft_lstlast.c ft_strnjoin.c \
+		get_next_line.c
 
 SRC.O 		= 	$(SRC.C:.c=.o)
 

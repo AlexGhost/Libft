@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define BUFF_SIZE 32
+
 typedef struct		s_list
 {
 	void			*content;
@@ -92,5 +94,6 @@ int					ft_lstsize(t_list *lst);
 t_list				*ft_lstat(t_list *lst, unsigned int nbr);
 void				ft_lstrev(t_list **lst);
 t_list				*ft_lstlast(t_list *lst);
+int					get_next_line(const int fd, char **line);
 
 #endif
