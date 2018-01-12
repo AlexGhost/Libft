@@ -6,7 +6,7 @@
 /*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2017/12/11 11:05:49 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/01/12 11:04:39 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int					ft_tolower(int c);
 char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);
-char				*ft_strnstr(const char *haystack, const char *needle,
+char				*ft_strnstr(const char *haystack, const char *needle, \
 		size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -96,5 +96,6 @@ void				ft_lstrev(t_list **lst);
 t_list				*ft_lstlast(t_list *lst);
 int					get_next_line(const int fd, char **line);
 int					ft_abs(int n);
+void				ft_putnbrl(int n);
 
 #endif
