@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 19:13:44 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 20:09:11 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/03 15:02:36 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 void	ft_putnbr(int n)
 {
-	long taille;
+	long size;
 	long nb;
 
-	taille = 1;
+	size = 1;
 	nb = n;
 	if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;
 	}
-	while (taille <= nb)
+	while (size <= nb)
+		size = size * 10;
+	size = size / 10;
+	while (size > 1)
 	{
-		taille = taille * 10;
-	}
-	taille = taille / 10;
-	while (taille > 1)
-	{
-		ft_putchar((nb / taille) + '0');
-		nb = nb % taille;
-		taille = taille / 10;
+		ft_putchar((nb / size) + '0');
+		nb = nb % size;
+		size = size / 10;
 	}
 	ft_putchar((nb % 10) + '0');
 }

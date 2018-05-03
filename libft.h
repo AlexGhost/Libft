@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2018/01/12 11:04:39 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/03 16:12:26 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ t_list				*ft_lstlast(t_list *lst);
 int					get_next_line(const int fd, char **line);
 int					ft_abs(int n);
 void				ft_putnbrl(int n);
+void				ft_putfloat(float f);
 
 #endif

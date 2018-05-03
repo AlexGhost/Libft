@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/05/03 14:06:24 by acourtin          #+#    #+#              #
+#    Updated: 2018/05/03 15:34:48 by acourtin         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 CC = gcc
 CCFLAGS = -Wall -Wextra -Werror
@@ -15,7 +27,7 @@ SRC.C = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstnew.c ft_lstdel.c \
 		ft_lstdelone.c ft_lstadd.c ft_lsttail.c ft_lstiter.c ft_lstmap.c \
 		ft_lstsize.c ft_lstat.c ft_lstrev.c ft_lstlast.c ft_strnjoin.c \
-		get_next_line.c ft_abs.c ft_putnbrl.c ft_putstr.c
+		get_next_line.c ft_abs.c ft_putnbrl.c ft_putstr.c ft_putfloat.c
 
 SRC.O 		= 	$(SRC.C:.c=.o)
 
