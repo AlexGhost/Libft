@@ -6,7 +6,7 @@
 /*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 11:14:59 by acourtin          #+#    #+#             */
-/*   Updated: 2018/05/03 16:12:26 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:58:11 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int					get_next_line(const int fd, char **line);
 int					ft_abs(int n);
 void				ft_putnbrl(int n);
 void				ft_putfloat(float f);
+void				ft_putfloatl(float f);
 
 #endif

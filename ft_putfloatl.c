@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putfloat.c                                      :+:      :+:    :+:   */
+/*   ft_putfloatl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 14:18:40 by acourtin          #+#    #+#             */
-/*   Updated: 2018/05/11 16:57:56 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:57:34 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void				negative(float *f)
 	}
 }
 
-void					ft_putfloat(float f)
+void					ft_putfloatl(float f)
 {
 	long				size;
 	long				size_tmp;
@@ -65,4 +65,5 @@ void					ft_putfloat(float f)
 		}
 		write_float(tmp2, size);
 	}
+	ft_putchar('\n');
 }
