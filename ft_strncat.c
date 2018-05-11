@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/03 15:22:53 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 19:14:53 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:24:03 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strncat(char *dest, const char *src, size_t nb)
 	i = 0;
 	taille = 0;
 	while (dest[taille] != '\0')
-	{
 		taille += 1;
-	}
 	while (src[i] != '\0' && i < nb)
 	{
 		dest[taille + i] = src[i];

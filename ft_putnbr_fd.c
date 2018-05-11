@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:45:56 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/10 20:10:05 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:21:57 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		nb = -nb;
 	}
 	while (taille <= nb)
-	{
 		taille = taille * 10;
-	}
 	taille = taille / 10;
 	while (taille > 1)
 	{

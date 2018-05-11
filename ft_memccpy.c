@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:07:44 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/11 18:03:53 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:19:54 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		pdst[i] = psrc[i];
 		if (psrc[i] == (unsigned char)c)
-		{
 			return (dst + (i + 1));
-		}
 		i++;
 	}
 	return (NULL);

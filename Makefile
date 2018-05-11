@@ -6,7 +6,7 @@
 #    By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/03 14:06:24 by acourtin          #+#    #+#              #
-#    Updated: 2018/05/03 15:34:48 by acourtin         ###   ########.fr        #
+#    Updated: 2018/05/11 16:30:37 by acourtin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ $(NAME): $(SRC.O)
 
 %.o: %.c
 	@$(CC) $(CCFLAGS) -o $@ -c $< -Iincludes
-	@printf "\r\033[K""\033[36m - Compilation de \033[0m$<\033[0m"
+	@echo "\033[36m[\t\033[0m$<\033[36m\t] \tOK\033[0m"
 
 clean:
 	@rm -rf $(SRC.O)

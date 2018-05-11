@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 21:10:18 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 21:10:39 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:17:59 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,5 @@ t_list		*ft_lstlast(t_list *lst)
 			curlist = curlist->next;
 		return (curlist);
 	}
-	else
-		return (0);
+	return (0);
 }

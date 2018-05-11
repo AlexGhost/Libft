@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 21:07:07 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 21:09:34 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:18:37 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ void		ft_lstrev(t_list **lst)
 		if (tmp_beforelast->next != 0)
 		{
 			while (tmp_beforelast->next->next != 0)
-			{
 				tmp_beforelast = tmp_beforelast->next;
-			}
 			tmp_beforelast->next = 0;
 			ft_lstrev(&tmp_begin);
 			tmp_last->next = tmp_begin;

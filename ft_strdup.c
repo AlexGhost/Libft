@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acourtin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acourtin <acourtin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 18:43:23 by acourtin          #+#    #+#             */
-/*   Updated: 2017/11/12 20:17:42 by acourtin         ###   ########.fr       */
+/*   Updated: 2018/05/11 16:23:19 by acourtin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ char	*ft_strdup(const char *src)
 	i = 0;
 	taille = 0;
 	while (src[taille] != '\0')
-	{
 		taille += 1;
-	}
 	newptr = (char*)malloc(sizeof(*newptr) * taille + 1);
 	if (!newptr)
 		return (NULL);
